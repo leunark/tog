@@ -20,6 +20,9 @@ dependencies:
   '@fullcalendar/vue3':
     specifier: ^6.1.8
     version: 6.1.8(@fullcalendar/core@6.1.8)(vue@3.3.4)
+  '@mdi/js':
+    specifier: ^7.2.96
+    version: 7.2.96
   '@vueuse/components':
     specifier: ^10.3.0
     version: 10.3.0(vue@3.3.4)
@@ -29,6 +32,9 @@ dependencies:
   chart.js:
     specifier: ^4.3.3
     version: 4.3.3
+  mdi-vue:
+    specifier: ^3.0.13
+    version: 3.0.13(@mdi/js@7.2.96)(vue@3.3.4)
   pinia:
     specifier: ^2.1.6
     version: 2.1.6(typescript@5.0.2)(vue@3.3.4)
@@ -429,6 +435,10 @@ packages:
 
   /@kurkle/color@0.3.2:
     resolution: {integrity: sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==}
+    dev: false
+
+  /@mdi/js@7.2.96:
+    resolution: {integrity: sha512-paR9M9ZT7rKbh2boksNUynuSZMHhqRYnEZOm/KrZTjQ4/FzyhjLHuvw/8XYzP+E7fS4+/Ms/82EN1pl/OFsiIA==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -1801,6 +1811,16 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /mdi-vue@3.0.13(@mdi/js@7.2.96)(vue@3.3.4):
+    resolution: {integrity: sha512-QHfRJZfhTA4FLqxBh4Gzxq+U+V/XQLw9l8lSIwJGMY4L+7oP+5HkAd+rsySIGfcHLEZakN3xcYpcroLZAoh0cw==}
+    peerDependencies:
+      '@mdi/js': '*'
+      vue: '*'
+    dependencies:
+      '@mdi/js': 7.2.96
+      vue: 3.3.4
+    dev: false
 
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}

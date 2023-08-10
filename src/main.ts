@@ -1,8 +1,10 @@
 /* eslint-disable vue/no-reserved-component-names */
 import { createApp } from 'vue';
-import App from './App.vue';
 import { createPinia } from 'pinia';
+import App from './App.vue';
 import router from './router';
+import mdiVue from 'mdi-vue/v3';
+import * as mdijs from '@mdi/js';
 
 import PrimeVue from 'primevue/config';
 import AutoComplete from 'primevue/autocomplete';
@@ -105,6 +107,9 @@ app.use(ToastService);
 
 app.use(pinia);
 app.use(router);
+app.use(mdiVue, {
+    icons: mdijs,
+});
 
 app.directive('tooltip', Tooltip);
 app.directive('ripple', Ripple);

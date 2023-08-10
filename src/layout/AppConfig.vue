@@ -127,6 +127,7 @@ const changeInputStyle = (styleClass: string) => {
                 </div>
             </div>
 
+            <!--
             <h5>Themes</h5>
             <div class="flex flex-wrap row-gap-3">
                 <div v-for="(theme, i) in themes" :key="i" class="w-3">
@@ -140,6 +141,7 @@ const changeInputStyle = (styleClass: string) => {
                     </Button>
                 </div>
             </div>
+            -->
 
             <h5>Scale</h5>
             <div class="flex align-items-center">
@@ -150,6 +152,7 @@ const changeInputStyle = (styleClass: string) => {
                 <Button icon="pi pi-plus" type="button" p-button @click="incrementScale()" class="p-button-text p-button-rounded w-2rem h-2rem ml-2" :disabled="layoutConfig.scale.value === scales[scales.length - 1]"></Button>
             </div>
 
+            <!--
             <template v-if="!simple">
                 <h5>Menu Type</h5>
                 <div class="flex flex-wrap row-gap-3">
@@ -229,6 +232,7 @@ const changeInputStyle = (styleClass: string) => {
                 <h5>Ripple Effect</h5>
                 <InputSwitch v-model="layoutConfig.ripple.value" @change="onChangeRipple"></InputSwitch>
             </template>
+            -->
         </div>
     </Sidebar>
 </template>

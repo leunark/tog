@@ -6,95 +6,113 @@ const routes = [
         component: AppLayout,
         children: [
             {
-                path: '/uikit/button',
-                name: 'button',
+                path: '/home',
+                name: 'Home',
                 meta: {
-                    breadcrumb: ['UI Kit', 'Button'],
+                    breadcrumb: ['General', 'Home'],
                 },
-                component: () => import('@/views/uikit/Button.vue'),
+                component: () => import('@/views/general/Home.vue'),
             },
             {
-                path: '/pages/aboutus',
-                name: 'aboutus',
+                path: '/news',
+                name: 'News',
                 meta: {
-                    breadcrumb: ['Pages', 'About'],
+                    breadcrumb: ['General', 'News'],
                 },
-                component: () => import('@/views/pages/AboutUs.vue'),
+                component: () => import('@/views/general/News.vue'),
+            },
+
+            /**
+             * HELP
+             */
+            {
+                path: '/help/about',
+                name: 'about',
+                meta: {
+                    breadcrumb: ['Help', 'About'],
+                },
+                component: () => import('@/views/help/AboutUs.vue'),
             },
             {
-                path: '/pages/contact',
+                path: '/help/contact',
                 name: 'contact',
-                component: () => import('@/views/pages/ContactUs.vue'),
+                meta: {
+                    breadcrumb: ['Help', 'Contact'],
+                },
+                component: () => import('@/views/help/ContactUs.vue'),
             },
             {
-                path: '/pages/faq',
+                path: '/help/faq',
                 name: 'faq',
                 meta: {
-                    breadcrumb: ['Pages', 'FAQ'],
+                    breadcrumb: ['Help', 'FAQ'],
                 },
-                component: () => import('@/views/pages/Faq.vue'),
-            },
-            {
-                path: '/pages/help',
-                name: 'help',
-                component: () => import('@/views/pages/Help.vue'),
-            },
-            {
-                path: '/pages/invoice',
-                name: 'invoice',
-                component: () => import('@/views/pages/Invoice.vue'),
+                component: () => import('@/views/help/Faq.vue'),
             },
         ],
     },
-    {
-        path: '/landing',
-        name: 'landing',
-        component: () => import('@/views/pages/Landing.vue'),
-    },
-    {
-        path: '/pages/notfound',
-        name: 'notfound',
-        component: () => import('@/views/pages/NotFound.vue'),
-    },
+
+    /**
+     * AUTHENTICATION
+     */
     {
         path: '/auth/login',
         name: 'login',
-        component: () => import('@/views/pages/auth/Login.vue'),
+        component: () => import('@/views/auth/Login.vue'),
     },
     {
         path: '/auth/access',
         name: 'accessDenied',
-        component: () => import('@/views/pages/auth/AccessDenied.vue'),
+        component: () => import('@/views/auth/AccessDenied.vue'),
     },
     {
         path: '/auth/error',
         name: 'error',
-        component: () => import('@/views/pages/auth/Error.vue'),
+        component: () => import('@/views/auth/Error.vue'),
     },
     {
         path: '/auth/register',
         name: 'register',
-        component: () => import('@/views/pages/auth/Register.vue'),
+        component: () => import('@/views/auth/Register.vue'),
     },
     {
         path: '/auth/forgotpassword',
         name: 'forgotpassword',
-        component: () => import('@/views/pages/auth/ForgotPassword.vue'),
+        component: () => import('@/views/auth/ForgotPassword.vue'),
     },
     {
         path: '/auth/newpassword',
         name: 'newpassword',
-        component: () => import('@/views/pages/auth/NewPassword.vue'),
+        component: () => import('@/views/auth/NewPassword.vue'),
     },
     {
         path: '/auth/verification',
         name: 'verification',
-        component: () => import('@/views/pages/auth/Verification.vue'),
+        component: () => import('@/views/auth/Verification.vue'),
     },
     {
         path: '/auth/lockscreen',
         name: 'lockscreen',
-        component: () => import('@/views/pages/auth/LockScreen.vue'),
+        component: () => import('@/views/auth/LockScreen.vue'),
+    },
+
+    /**
+     * MISCELLANEOUS
+     */
+    {
+        path: '/landing',
+        name: 'landing',
+        component: () => import('@/views/misc/Landing.vue'),
+    },
+    {
+        path: '/notfound',
+        name: 'notfound',
+        component: () => import('@/views/misc/NotFound.vue'),
+    },
+    {
+        path: '/empty',
+        name: 'empty',
+        component: () => import('@/views/misc/Empty.vue'),
     },
 ];
 

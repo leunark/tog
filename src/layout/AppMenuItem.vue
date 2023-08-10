@@ -187,9 +187,9 @@ const checkActiveRoute = (item: any) => {
             @mouseenter="onMouseEnter"
             v-tooltip.hover="isSlim && root && !isActiveMenu ? item.label : null"
         >
-            <i :class="item.icon" class="layout-menuitem-icon"></i>
+            <i :class="item.icon" class="layout-menuitem-icon" />
             <span class="layout-menuitem-text">{{ item.label }}</span>
-            <i class="pi pi-fw pi-angle-down layout-submenu-toggler" v-if="item.items"></i>
+            <i class="pi pi-fw pi-angle-down layout-submenu-toggler" v-if="item.items" />
         </a>
         <router-link
             v-if="item.to && !item.items && item.visible !== false"
@@ -200,9 +200,9 @@ const checkActiveRoute = (item: any) => {
             @mouseenter="onMouseEnter"
             v-tooltip.hover="(isSlim || isSlimPlus) && root && !isActiveMenu ? item.label : null"
         >
-            <i :class="item.icon" class="layout-menuitem-icon"></i>
+            <i :class="item.icon" class="layout-menuitem-icon" />
             <span class="layout-menuitem-text">{{ item.label }}</span>
-            <i class="pi pi-fw pi-angle-down layout-submenu-toggler" v-if="item.items"></i>
+            <i class="pi pi-fw pi-angle-down layout-submenu-toggler" v-if="item.items" />
         </router-link>
 
         <ul ref="subMenuRef" :class="{ 'layout-root-submenulist': root }" v-if="item.items && item.visible !== false">
